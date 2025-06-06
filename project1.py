@@ -1,0 +1,33 @@
+import random
+
+print("welcome to game")
+rounds=int(input("enter no.of rounds"))
+user1=['rock','paper','scissor']
+user2=['rock','paper','scissor']
+for round_num in range(1, rounds + 1):
+  choice1=random.choice(user1)
+  choice2=random.choice(user2)
+  print(f"user1 choice : {choice1}\n user2 choice : {choice2}\n")
+  score_1=0
+  score_2=0
+  if(choice1==choice2):
+      print('No points!!round is Tie\n')
+  elif (choice1=='rock' and choice2=='paper') or (choice1=='rock' and choice2=='scissor') or (choice1=='scissor' and choice2=='paper'):
+      score_1+=1
+      print('user1 won this round\n')
+  elif (choice1=='paper' and choice2=='rock') or (choice1=='paper' and choice2=='scissor') or (choice1=='scissor' and choice=='rock'):
+      score_2+=1
+      print('Alas!!!user2 won this\n')
+      
+      
+print('DISPLAYING SCORE AND WINNER') 
+print(f"user1 marks: {score_1}\n user2 marks: {score_2}")
+if score_1==score_2:
+ print('congratulations both!')
+elif score_1>score_2:
+ print('user1 won this round! congratulation budddy! keep playing')   
+else:
+ print('user2 won this round!congratulation budddy! keep playing')
+ 
+print("THANKYOU FOR PLAYING")
+    
