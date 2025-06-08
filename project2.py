@@ -1,0 +1,25 @@
+#password generator
+import random
+alphabets=['a','b','c','d','e','f','g','h','i','j','k','l','m','n'
+       'o','p','q','r','s','t','u','v','w','x','y','z',
+         'A','B','C','D','E','F','G','H'
+         ,'I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+numbers=['0','1','2','3','4','5','6','7','8','9']
+symbols=['!','@','#','$','%','^','&','*','(',')']
+print("welcome to the optional generator") #optional
+letters=int(input("How many letters do you want in your random password?"))
+digits=int(input("How many Digits you want in your password?"))
+Specialcharacters=int(input("How many Special Characters you want?"))
+password=" "
+#loop will be iterate n time for random formation of letters
+for i in range(1,letters+1):
+   p1=random.choice(alphabets)
+   password=password+p1
+for i in range(1,digits+1):
+    p2=random.choice(numbers)
+    password=password+p2
+for i in range(1,Specialcharacters+1):
+    p3=random.choice(symbols)
+    password=password+p3
+
+print("your strong password is-",password)    
